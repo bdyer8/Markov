@@ -1,0 +1,75 @@
+%% PNAStwoS.tex
+%% Sample file to use for PNAS articles prepared in LaTeX
+%% For two column PNAS articles
+%% Version1: Apr 15, 2008
+%% Version2: Oct 04, 2013
+%% BASIC CLASS FILE
+\documentclass{pnastwo}
+%\usepackage[round,numbers,sort&compress]{natbib}
+%\usepackage{amssymb}
+\usepackage{textcomp}
+\usepackage{datetime}
+%\usepackage{amsmath}
+%\usepackage{graphicx}
+%% ADDITIONAL OPTIONAL STYLE FILES Font specification
+%\usepackage{pnastwoF}
+\usepackage{cite}
+
+%% OPTIONAL MACRO DEFINITIONS
+\def\s{\sigma}
+%%%%%%%%%%%%
+%% For PNAS Only:
+\url{}
+\def\versionnumber{v0.1}
+\copyrightyear{2015}
+\issuedate{Issue Date}
+\volume{Volume}
+\issuenumber{Issue Number}
+%\setcounter{page}{2687} %Set page number here if desired
+%%%%%%%%%%%%
+\begin{document}
+\graphicspath{{images/}}
+\title{MarkovModelBahamas}
+
+\author{Blake Dyer\affil{1}{Department of Geosciences, Princeton University, Guyot Hall, Washington Road, Princeton, NJ, 08544, USA},
+Adam C. Maloof\affil{1}{}}
+
+\contributor{Work in progress - last saved \today~\currenttime}
+
+\significancetext{Significant Text.}
+
+\maketitle
+
+\begin{article}
+\begin{abstract}
+\end{abstract}
+
+\keywords{markov process | sedimentology | stratigraphy | cycles}
+
+\abbreviations{DIC, dissolved inorganic carbon}
+
+\section{INTRODUCTION}
+\dropcap{Y}ada yada...  
+
+\section{STRATIGRAPHY}
+Yada yada...
+
+\section{DISCUSSION}
+Yada yada...
+
+\section{CONCLUSION}
+Yada yada...
+
+\begin{acknowledgments}
+Yada yada...
+\end{acknowledgments}
+
+\begin{thebibliography}{10}
+\bibitem{Temp2012}
+Temp et al (2012) Temp title.  \textit{Jucket Journal} 319:241--240.
+\end{thebibliography}
+
+\end{article}
+\end{document}
+
+
