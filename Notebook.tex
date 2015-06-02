@@ -1,0 +1,46 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[12pt]{article}
+\usepackage[letterpaper, margin=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\setromanfont[Mapping=tex-text]{Times}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica}
+\setmonofont[Scale=MatchLowercase]{Andale Mono}
+
+\pagestyle{fancy}
+\renewcommand{\footrulewidth}{0pt}
+\lhead{Blake Dyer}
+\rhead{\thepage~of \pageref{LastPage}}
+\chead{Theoretical Sedimentology: Carbonates}
+\fancyfoot{}
+
+\title{\sffamily \Huge Theoretical Sedimentology: Carbonates}
+\author{\sffamily Blake Dyer, Princeton University}
+\date{}                                           % Activate to display a given date or no date
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\vspace{6em}
+
+%\begin{center}
+%\includegraphics[width=.99\textwidth]{stratSummary2.pdf}   
+%\end{center}
+
+\newpage
+
+\setcounter{page}{1}
+\section*{\sffamily 02 June 2015}
+Today I managed to get python - goal working with DEM files from the bahamas.  the GMRT dataset is pretty good around Andros island, low resolution to the north.  I might be able to find another DEM and patch that, not sure.  For now, I will continue with developing some python scripts to work with the DEM data and geopandas shapefiles of facies maps for the region.  then, i will start working on developing the walkers for generating transition matrices.  take a look at [harris2015] for the water energy information.  also, add some figures from today
+
+%\begin{center}
+%\includegraphics[width=.99\textwidth]{DEMspline.pdf}   
+%\end{center}
+
+\end{document}  
