@@ -19,8 +19,8 @@ from matplotlib import cm
 gd = gdal.Open('test.tif')
 band=gd.GetRasterBand(1)
 array = band.ReadAsArray()
-arrayMasked = ma.masked_greater(array,-6000)
-array[~arrayMasked.mask]=float('nan')
+arrayMasked = ma.masked_greater(array,-30)
+#array[~arrayMasked.mask]=float('nan')
 arrayMasked = ma.masked_greater(array,0)
 #array[arrayMasked.mask]=float('nan')
 # get lat/lon coordinates from DEM file.
@@ -61,8 +61,8 @@ z=coordarray[~np.isnan(coordarray)]
 
 
 spline = sp.interpolate.Rbf(x,y,z,function='thin-plate')
-xi = np.linspace(min(x), max(x),num=300)
-yi = np.linspace(min(y), max(y),num=300)
+xi = np.linspace(min(x), max(x),num=175)
+yi = np.linspace(min(y), max(y),num=175)
 X, Y = np.meshgrid(xi, yi)
 
 # interpolation
@@ -70,7 +70,7 @@ Z = spline(X,Y)
 
 fig = plt.figure(figsize=(19,14))
 ax = fig.add_subplot(111, projection='3d')
-ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.jet,linewidth=0.1, antialiased=True, vmin=-30, vmax=0)
+ax.plot_surface(X, Y, Z, rstride=1, cstride=1, cmap=cm.jet,linewidth=0.1, antialiased=True, vmin=-6000, vmax=200)
 plt.show()
 
 # setup figure.
